@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medalha Nicolas — 4 opções (3 cm)</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem 1rem 3rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+    .sub {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      max-width: 40rem;
+      margin: 0 auto 2rem;
+      line-height: 1.5;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+    }
+    article h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      color: #1e3a5f;
+    }
+    article p.tagline {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+    .medal-wrap {
+      width: 3cm;
+      height: 3cm;
+      margin: 0 auto 1rem;
+      filter: drop-shadow(0 4px 14px rgba(30, 58, 95, 0.15));
+    }
+    .medal-wrap svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .hint {
+      font-size: 0.8rem;
+      color: #64748b;
+      max-width: 42rem;
+      margin: 2rem auto 0;
+      text-align: center;
+      line-height: 1.45;
+    }
+    code { background: #e2e8f0; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.85em; }
+  </style>
+</head>
+<body>
+  <h1>Medalha · Chá de Bebê do Nicolas · Honra ao Mérito</h1>
+  <p class="sub">
+    Quatro layouts para validar. Cada medalha está em <strong>3 cm</strong> de diâmetro no CSS. Use zoom no navegador para inspecionar.
+  </p>
+
+  <div class="grid">
+    <!-- Opção 1 -->
+    <article>
+      <h2>Opção 1 — Clássica</h2>
+      <p class="tagline">Aro em duas meias-luas (texto maior), linha interna legível, centro com estrela e ramos.</p>
+      <div class="medal-wrap" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="o1-rim" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f0d78c" />
+              <stop offset="40%" stop-color="#c9a227" />
+              <stop offset="100%" stop-color="#7a5c12" />
+            </linearGradient>
+            <linearGradient id="o1-face" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#fffdf7" />
+              <stop offset="100%" stop-color="#ebe3d4" />
+            </linearGradient>
+            <!-- Arco superior (borda externa do texto) -->
+            <path id="o1-arcTop" d="M 22,100 A 78,78 0 0 1 178,100" fill="none" />
+            <!-- Arco inferior -->
+            <path id="o1-arcBot" d="M 22,100 A 78,78 0 0 0 178,100" fill="none" />
+            <!-- Meio: frase curta -->
+            <path id="o1-arcMid" d="M 34,100 A 66,66 0 0 1 166,100" fill="none" />
+          </defs>
+          <circle cx="100" cy="100" r="97" fill="url(#o1-rim)" />
+          <circle cx="100" cy="100" r="88" fill="url(#o1-face)" stroke="#c9a227" stroke-width="1.25" />
+          <text fill="#1e3a5f" font-family="Georgia, serif" font-size="13.5" font-weight="700" letter-spacing="0.04em">
+            <textPath href="#o1-arcTop" startOffset="50%" text-anchor="middle">Brincadeiras ★ Honra ao Mérito</textPath>
+          </text>
+          <text fill="#1e3a5f" font-family="Georgia, serif" font-size="13.5" font-weight="700" letter-spacing="0.05em">
+            <textPath href="#o1-arcBot" startOffset="50%" text-anchor="middle">Nicolas · Chá de Bebê</textPath>
+          </text>
+          <text fill="#475569" font-family="Georgia, serif" font-size="10" font-weight="600" letter-spacing="0.02em">
+            <textPath href="#o1-arcMid" startOffset="50%" text-anchor="middle">Prêmio especial aos vencedores</textPath>
+          </text>
+          <g transform="translate(100,100)">
+            <circle r="36" fill="#fffef9" stroke="#c2410c" stroke-width="1.6" />
+            <!-- Ramos estilizados -->
+            <path d="M -34,-6 Q -44,-18 -38,-28 Q -32,-24 -30,-14" fill="none" stroke="#1e3a5f" stroke-width="1.4" stroke-linecap="round" opacity="0.45" />
+            <path d="M 34,-6 Q 44,-18 38,-28 Q 32,-24 30,-14" fill="none" stroke="#1e3a5f" stroke-width="1.4" stroke-linecap="round" opacity="0.45" />
+            <!-- Estrela -->
+            <path fill="#c9a227" stroke="#a67c00" stroke-width="0.6"
+              d="M 0,-20 L 5.5,-6.5 L 20,-6.5 L 8.5,2.5 L 12.5,17 L 0,8.5 L -12.5,17 L -8.5,2.5 L -20,-6.5 L -5.5,-6.5 Z" />
+            <text y="28" text-anchor="middle" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#1e3a5f">Nicolas</text>
+            <text y="42" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.22em" fill="#c2410c">CHÁ DE BEBÊ</text>
+          </g>
+        </svg>
+      </div>
+    </article>
+
+    <!-- Opção 2 -->
+    <article>
+      <h2>Opção 2 — Pegadinha fofa</h2>
+      <p class="tagline">Mesmos aros; centro com pegadas + coração. Bom para clima de chá de bebê.</p>
+      <div class="medal-wrap" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="o2-rim" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e8c96b" />
+              <stop offset="100%" stop-color="#8b6914" />
+            </linearGradient>
+            <linearGradient id="o2-face" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#fffefb" />
+              <stop offset="100%" stop-color="#f3ead8" />
+            </linearGradient>
+            <path id="o2-arcTop" d="M 22,100 A 78,78 0 0 1 178,100" fill="none" />
+            <path id="o2-arcBot" d="M 22,100 A 78,78 0 0 0 178,100" fill="none" />
+            <path id="o2-arcMid" d="M 38,100 A 62,62 0 0 1 162,100" fill="none" />
+          </defs>
+          <circle cx="100" cy="100" r="97" fill="url(#o2-rim)" />
+          <circle cx="100" cy="100" r="88" fill="url(#o2-face)" stroke="#d4a84b" stroke-width="1.2" />
+          <text fill="#1e3a5f" font-family="Georgia, serif" font-size="12.8" font-weight="700" letter-spacing="0.03em">
+            <textPath href="#o2-arcTop" startOffset="50%" text-anchor="middle">Brincadeiras ★ Honra ao Mérito</textPath>
+          </text>
+          <text fill="#1e3a5f" font-family="Georgia, serif" font-size="12.8" font-weight="700" letter-spacing="0.04em">
+            <textPath href="#o2-arcBot" startOffset="50%" text-anchor="middle">Nicolas · Chá de Bebê</textPath>
+          </text>
+          <text fill="#5b6470" font-family="Georgia, serif" font-size="9.8" font-weight="600">
+            <textPath href="#o2-arcMid" startOffset="50%" text-anchor="middle">Campeões das brincadeiras</textPath>
+          </text>
+          <g transform="translate(100,100)">
+            <circle r="38" fill="#fffdf8" stroke="#c2410c" stroke-width="1.5" />
+            <!-- Coração simples -->
+            <path fill="#c2410c" opacity="0.85" transform="translate(0,-12) scale(0.9)"
+              d="M 0,4 C -8,-6 -16,-2 -12,6 C -8,12 0,18 0,18 C 0,18 8,12 12,6 C 16,-2 8,-6 0,4 Z" />
+            <!-- Pegadas -->
+            <ellipse cx="-14" cy="14" rx="7" ry="9" fill="#1e3a5f" opacity="0.35" transform="rotate(-18 -14 14)" />
+            <ellipse cx="14" cy="16" rx="7" ry="9" fill="#1e3a5f" opacity="0.35" transform="rotate(18 14 16)" />
+            <ellipse cx="-10" cy="22" rx="4" ry="5" fill="#1e3a5f" opacity="0.35" transform="rotate(-10 -10 22)" />
+            <ellipse cx="10" cy="24" rx="4" ry="5" fill="#1e3a5f" opacity="0.35" transform="rotate(10 10 24)" />
+            <text y="40" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#1e3a5f">Nicolas</text>
+            <text y="54" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="8" font-weight="700" letter-spacing="0.2em" fill="#c2410c">CHÁ DE BEBÊ</text>
+          </g>
+        </svg>
+      </div>
+    </article>
+
+    <!-- Opção 3 -->
+    <article>
+      <h2>Opção 3 — Troféu ao mérito</h2>
+      <p class="tagline">Um único anel com frase contínua (menos caótico no círculo). Troféu + fita no centro.</p>
+      <div class="medal-wrap" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="o3-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f5d88a" />
+              <stop offset="50%" stop-color="#b8891c" />
+              <stop offset="100%" stop-color="#5c4a0e" />
+            </linearGradient>
+            <path id="o3-ringFull" d="M 100,20 A 80,80 0 1 1 99.97,20" fill="none" />
+          </defs>
+          <circle cx="100" cy="100" r="97" fill="url(#o3-rim)" />
+          <circle cx="100" cy="100" r="86" fill="#faf6ee" stroke="#b8891c" stroke-width="1.1" />
+          <text fill="#1e3a5f" font-family="Georgia, serif" font-size="11.2" font-weight="700" letter-spacing="0.06em">
+            <textPath href="#o3-ringFull" startOffset="25%">
+              ★ Honra ao Mérito ★ Chá do Nicolas ★ Brincadeiras ★
+            </textPath>
+          </text>
+          <g transform="translate(100,98)">
+            <circle r="40" fill="#fff" stroke="#1e3a5f" stroke-width="1.3" opacity="0.95" />
+            <!-- Fita -->
+            <path d="M -32,18 L -26,32 L -8,26 L 0,34 L 8,26 L 26,32 L 32,18" fill="none" stroke="#c2410c" stroke-width="1.8" stroke-linejoin="round" opacity="0.9" />
+            <!-- Taça -->
+            <path fill="#c9a227" stroke="#8b6914" stroke-width="0.5"
+              d="M -18,8 L 18,8 L 14,18 L -14,18 Z M -14,18 L -10,22 L 10,22 L 14,18 M 0,22 L 0,28 M -12,28 L 12,28" />
+            <rect x="-10" y="-14" width="20" height="10" rx="2" fill="url(#o3-rim)" opacity="0.9" />
+            <text y="4" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#1e3a5f">Nicolas</text>
+            <text y="44" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="7.5" font-weight="700" letter-spacing="0.18em" fill="#64748b">CHÁ DE BEBÊ</text>
+          </g>
+        </svg>
+      </div>
+    </article>
+
+    <!-- Opção 4 -->
+    <article>
+      <h2>Opção 4 — Minimal</h2>
+      <p class="tagline">Tipos maiores no centro, anel só com palavras-chave; microtexto em arco bem dentro.</p>
+      <div class="medal-wrap" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="o4-rim" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e8c96b" />
+              <stop offset="100%" stop-color="#6b5420" />
+            </linearGradient>
+            <path id="o4-arcTop" d="M 20,100 A 80,80 0 0 1 180,100" fill="none" />
+            <path id="o4-arcBot" d="M 20,100 A 80,80 0 0 0 180,100" fill="none" />
+            <path id="o4-arcTiny" d="M 48,100 A 52,52 0 0 1 152,100" fill="none" />
+          </defs>
+          <circle cx="100" cy="100" r="98" fill="url(#o4-rim)" />
+          <circle cx="100" cy="100" r="89" fill="#fdfcfa" stroke="#1e3a5f" stroke-opacity="0.2" stroke-width="0.8" />
+          <text fill="#1e3a5f" font-family="Georgia, serif" font-size="14" font-weight="800" letter-spacing="0.12em">
+            <textPath href="#o4-arcTop" startOffset="50%" text-anchor="middle">HONRA AO MÉRITO</textPath>
+          </text>
+          <text fill="#c2410c" font-family="Georgia, serif" font-size="13" font-weight="700" letter-spacing="0.08em">
+            <textPath href="#o4-arcBot" startOffset="50%" text-anchor="middle">CHÁ DE BEBÊ · NICOLAS</textPath>
+          </text>
+          <text fill="#94a3b8" font-family="Georgia, serif" font-size="9" font-weight="600">
+            <textPath href="#o4-arcTiny" startOffset="50%" text-anchor="middle">Brincadeiras · Lembrança especial</textPath>
+          </text>
+          <g transform="translate(100,100)">
+            <circle r="34" fill="none" stroke="#c2410c" stroke-width="2.2" />
+            <text y="6" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#1e3a5f">Nicolas</text>
+            <text y="22" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="7" font-weight="700" letter-spacing="0.25em" fill="#64748b">CAMPEÃO</text>
+          </g>
+        </svg>
+      </div>
+    </article>
+  </div>
+
+  <p class="hint">
+    Cada cartão mantém <code>3 cm</code> × <code>3 cm</code>. Para imprimir: exportar SVG ou PDF em escala 1:1 a partir do mesmo <code>viewBox</code>.
+    Se algum arco de texto aparecer invertido no seu navegador, avise qual opção que ajusto o path.
+  </p>
+</body>
+</html>
